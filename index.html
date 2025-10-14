@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+
+<body>
+
+<section class="catalog-main">
+    <div class="container">
+        <div class="catalog-content">
+
+            <div class="catalog-filter">
+                <h3>Фильтры</h3>
+                <div class="catalog-filter-price">
+                        <div class="catalog-filter-title">
+                            <h4>Стоимость (₽)</h4>
+                            <span class="filter-reset">Сбросить</span>
+                        </div>
+                        <div class="catalog-filter-range">
+                            <div data-index="0" data-max="100000" data-min="100" data-id="1"
+                                 class="nonlinear">
+                            </div>
+                        </div>
+                        <div class="change-range-block">
+                            <div class="change-range-input">
+                                <p>От</p>
+                                <input name="price_min" placeholder="0" data-index="0"
+                                       id="1-lower-value" type="number"
+                                       min="0" value="100"/>
+                            </div>
+                            <div class="change-range-input">
+                                <p>До</p>
+                                <input name="price_max" placeholder="0" data-index="0"
+                                       id="1-upper-value" type="number"
+                                       min="0" value="100000"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Марка авто</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                    <div class="select-car">
+                        <label>
+                            <select name="catalog-car" id="catalog-car">
+                                <option value="">Любая</option>
+                                <option value="">Toyota</option>
+                                <option value="">Bwm</option>
+                                <option value="">Porche</option>
+                                <option value="">Hyundai</option>
+                                <option value="">Chevrolet</option>
+                                <option value="">Kia</option>
+                                <option value="">Renault</option>
+
+                                <option value="">Hyundai</option>
+                                <option value="">Chevrolet</option>
+                                <option value="">Kia</option>
+                                <option value="">Renault</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Модель</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                    <div class="select-car">
+                        <label>
+                            <select name="model-car" id="model-car">
+                                <option value="">Любая</option>
+                                <option value="">Toyota</option>
+                                <option value="">Bwm</option>
+                                <option value="">Porche</option>
+                                <option value="">Hyundai</option>
+                                <option value="">Chevrolet</option>
+                                <option value="">Kia</option>
+                                <option value="">Renault</option>
+
+                                <option value="">Hyundai</option>
+                                <option value="">Chevrolet</option>
+                                <option value="">Kia</option>
+                                <option value="">Renault</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Пробег (км)</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                    <div class="change-range-block">
+                        <div class="change-range-input">
+                            <p>От</p>
+                            <input placeholder="1300560"
+                                   type="number"
+                                   />
+                        </div>
+                        <div class="change-range-input">
+                            <p>До</p>
+                            <input placeholder="16456560"
+                                   type="number"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Год</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                    <div class="select-car">
+                        <label>
+                            <select name="year-car" id="year-car">
+                                <option value="">Год выпуска</option>
+                                <option value="">2000</option>
+                                <option value="">2002</option>
+                                <option value="">2012</option>
+                                <option value="">2015</option>
+                                <option value="">2016</option>
+                                <option value="">2017</option>
+                                <option value="">2018</option>
+                                <option value="">2011</option>
+                                <option value="">2021</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Тип машины</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                   <div class="checkbox-filter-box">
+                       <div class="checkbox-filter">
+                           <label>
+                               <strong>Кроссовер</strong>
+                               <small>120</small>
+                               <input type="checkbox" name="type-car">
+                               <span class="checkmark"></span>
+                           </label>
+                       </div>
+                       <div class="checkbox-filter">
+                           <label>
+                               <strong>Внедорожник</strong>
+                               <small>48</small>
+                               <input type="checkbox" name="type-car">
+                               <span class="checkmark"></span>
+                           </label>
+                       </div>
+                       <div class="checkbox-filter">
+                           <label>
+                               <strong>Минивэн</strong>
+                               <small>99</small>
+                               <input type="checkbox" name="type-car">
+                               <span class="checkmark"></span>
+                           </label>
+                       </div>
+                       <div class="checkbox-filter">
+                           <label>
+                               <strong>Хэтчбэк</strong>
+                               <small>1235</small>
+                               <input type="checkbox" name="type-car">
+                               <span class="checkmark"></span>
+                           </label>
+                       </div>
+
+                   </div>
+                </div>
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Двигатель</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                    <div class="checkbox-filter-box">
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Дизель</strong>
+                                <small>460</small>
+                                <input type="checkbox" name="type-mator">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Бензин</strong>
+                                <small>320</small>
+                                <input type="checkbox" name="type-mator">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Гибрид</strong>
+                                <small>342</small>
+                                <input type="checkbox" name="type-mator">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Электро</strong>
+                                <small>46</small>
+                                <input type="checkbox" name="type-mator">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Коробка передач</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                    <div class="checkbox-filter-box">
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Автомат</strong>
+                                <small>874</small>
+                                <input type="checkbox" name="transmission">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Механика</strong>
+                                <small>962</small>
+                                <input type="checkbox" name="transmission">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Робот</strong>
+                                <small>603</small>
+                                <input type="checkbox" name="transmission">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Вариатор</strong>
+                                <small>1876</small>
+                                <input type="checkbox" name="transmission">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="select-box">
+                    <div class="catalog-filter-title">
+                        <h4>Привод</h4>
+                        <span class="filter-reset">Сбросить</span>
+                    </div>
+                    <div class="checkbox-filter-box">
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Передний</strong>
+                                <small>603</small>
+                                <input type="checkbox" name="drive">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Задний</strong>
+                                <small>874</small>
+                                <input type="checkbox" name="drive">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label>
+                                <strong>Полный</strong>
+                                <small>320</small>
+                                <input type="checkbox" name="drive">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <button class="btn-reset-all">Сбросить все</button>
+
+            </div>
+            <div class="catalog-right">
+                <div class="catalog-head">
+                    <div class="catalog-search">
+                        <form>
+                            <div class="catalog-search-inp">
+                                <label>
+                                    <input type="text" placeholder="Поиск по названию">
+                                </label>
+                                <button class="search-btn">Найти</button>
+                            </div>
+                            <div class="catalog-search-info">
+                                <ul>
+                                    <li>Mercedes C class С200</li>
+                                    <li>Mercedes A-class</li>
+                                    <li>Mercedes A 200</li>
+                                    <li>Mercedes C-class (W206)</li>
+                                    <li>Mercedes C-class (W206)</li>
+                                    <li>Mercedes C-class (W206)</li>
+                                    <li>Mercedes C-class (W206)</li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="catalog-select">
+                        <div class="select-click">Сортировать</div>
+                        <div class="catalog-select-drop">
+                            <ul>
+                                <li>Сначала дешевле</li>
+                                <li>Сначала дороже</li>
+                                <li>Сначала новые</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-car">
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/mercedes.jpg" alt="mercedes">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>Mercedes C class С200 2020</span>
+                            <span>2 650 000 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/audi.jpg" alt="audi">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>Audi Q5 2020</span>
+                            <span>3 172 237 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/Audi-Q7.jpg" alt="Audi">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>Audi Q7 45 TDI Premium 2021</span>
+                            <span>6 074 736 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/bmw.jpg" alt="bmw">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>BMW 1 series 120i M 2021</span>
+                            <span>2 678 137 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/BMW3.jpg" alt="bmw">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>BMW 3 series 320i Luxury 2020</span>
+                            <span>3 160 037₽</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/BMWX5.jpg" alt="bmw">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>BMW X5 xDrive 30d xLine 2021</span>
+                            <span>6 172 336 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/Chevrolet.jpg" alt="Chevrolet">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>Chevrolet Malibu 2021</span>
+                            <span>2 609 000 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/Hyundai.jpg" alt="Hyundai">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>Hyundai Sonata 2020</span>
+                            <span>1 943 577 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/Sonata.jpg" alt="Sonata">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>KIA Carnival 2021</span>
+                            <span>6 716 938 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/kia.jpg" alt="kia">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>KIA k5 2020</span>
+                            <span>2 317 653 ₽</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/Porsche.jpg" alt="Porsche">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>Porsche Macan 2021</span>
+                            <span>5 688 935 ₽</span>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-car-box">
+                        <div class="catalog-car-photo">
+                            <img src="./assets/img/Renault.jpg" alt="Porsche">
+                        </div>
+                        <div class="catalog-car-name">
+                            <span>Renault Capture 2020</span>
+                            <span>1 639 345 ₽</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pagination-block">
+                    <div class="pagination-pages">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <span class="pag-ext">...</span>
+                        <a href="#">60</a>
+                    </div>
+                    <button class="btn-see-more">Показать еще</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="assets/js/jquery-3.6.4.js"></script>
+<script src="assets/js/nouislider.min.js"></script>
+<script src="assets/js/jquery.formstyler.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
