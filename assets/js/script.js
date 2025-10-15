@@ -1,6 +1,4 @@
-$(document).ready(function () {
-    $('select').styler();
-});
+
 
 $('.catalog-search-inp').on('click', function(e) {
     e.stopPropagation();
@@ -123,3 +121,78 @@ $(function () {
 
 
 
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const selects = document.querySelectorAll(".custom-select");
+    const results = document.getElementById("reset-results");
+    const activeFilters = document.getElementById("active-filters");
+
+    // открытие/закрытие
+    selects.forEach(select => {
+        const title = select.querySelector(".select-title");
+        const options = select.querySelector(".select-options");
+
+        title.addEventListener("click", () => {
+            if (title.classList.contains("disabled")) return;
+            options.classList.toggle("show");
+        });
+
+        options.querySelectorAll("li").forEach(li => {
+            li.addEventListener("click", () => {
+                const val = li.dataset.value;
+                const text = li.textContent;
+
+                title.textContent = text;
+                options.classList.remove("show");
+
+                if (val) addFilter(select.dataset.type, text);
+
+                // включаем модель после выбора марки
+                if (select.id === "brand-select") {
+                    document.getElementById("model-select").classList.remove("disabled");
+                    document.querySelector("#model-select .select-title").classList.remove("disabled");
+                }
+            });
+        });
+    });
+
+    // добавить фильтр
+    function addFilter(type, text) {
+        results.style.display = "block";
+        let exist = activeFilters.querySelector(`[data-type="${type}"]`);
+        if (exist) exist.remove();
+
+        const box = document.createElement("div");
+        box.className = "reset-results-box";
+        box.dataset.type = type;
+        box.innerHTML = `<span>${text}</span><div class="close-this-reset"><i></i></div>`;
+        activeFilters.appendChild(box);
+
+        // закрытие фильтра
+        box.querySelector(".close-this-reset").addEventListener("click", () => {
+            box.remove();
+            if (activeFilters.querySelectorAll(".reset-results-box").length === 0) {
+                results.style.display = "none";
+            }
+        });
+    }
+
+    // очистить все
+    document.querySelector(".clear-all").addEventListener("click", () => {
+        activeFilters.querySelectorAll(".reset-results-box").forEach(b => b.remove());
+        results.style.display = "none";
+    });
+
+    // закрыть dropdown вне клика
+    document.addEventListener("click", e => {
+        if (!e.target.closest(".custom-select")) {
+            document.querySelectorAll(".select-options").forEach(o => o.classList.remove("show"));
+        }
+    });
+});
