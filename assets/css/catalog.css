@@ -831,6 +831,27 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         margin-top: 10px;
         padding-bottom: 14px;
     }
+
+
+    .checkbox-filter-box {
+        flex-direction: row-reverse;
+        gap: 14px;
+        overflow-x: scroll;
+    }
+    .checkbox-filter-box::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: unset;
+    }
+    .checkbox-filter-box::-webkit-scrollbar-thumb {
+        width: 0;
+        height: 0;
+        background: unset;
+
+    }
+    .checkbox-filter small {
+        margin-left: 8px;
+    }
 }
 
 
